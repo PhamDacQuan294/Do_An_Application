@@ -1,10 +1,12 @@
 package bai01;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-public class Doi_nhi_phan {
-     public static void main(String[] args) {
+
+public class Doi_Nhi_Phan {
+    public static void main(String[] args) {
         JFrame frame = new JFrame("Chuyển đổi số thập phân sang nhị phân");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 200);
@@ -19,9 +21,9 @@ public class Doi_nhi_phan {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    int Sthapphan = Integer.parseInt(textField.getText());
-                    String Chuoinhiphan = Integer.toBinaryString(Sthapphan);
-                    resultLabel.setText("Nhị phân: " + Chuoinhiphan);
+                    int decimalNumber = Integer.parseInt(textField.getText());
+                    String binaryString = Integer.toBinaryString(decimalNumber);
+                    resultLabel.setText("Nhị phân: " + binaryString);
                 } catch (NumberFormatException ex) {
                     resultLabel.setText("Vui lòng nhập số hợp lệ!");
                 }
@@ -36,3 +38,4 @@ public class Doi_nhi_phan {
         frame.setVisible(true);
     }
 }
+
